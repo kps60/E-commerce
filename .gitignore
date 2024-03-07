@@ -41,6 +41,8 @@
 /api/*.dat
 /api/*.dmg
 /api/*.gz
+/api/.env
+/client/.env
 /api/*.iso
 /api/*.jar
 /api/*.rar
