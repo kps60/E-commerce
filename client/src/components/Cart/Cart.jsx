@@ -52,7 +52,9 @@ const Cart = () => {
                     <div className="empty-cart">
                         <BsCartX />
                         <span>No products in the cart.</span>
-                        <button className="return-cta" onClick={() => {navigate('/')}}>
+                        <button className="return-cta" onClick={() => {navigate('/');
+                            setShowCart(false)
+                        }}>
                             RETURN TO SHOP
                         </button>
                     </div>
