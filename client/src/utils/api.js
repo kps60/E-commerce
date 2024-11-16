@@ -9,7 +9,7 @@ const params = {
 export const fetchDataFromApi = async (url) => {
     try {
         const { data } = await axios.get(
-            process.env.REACT_APP_STRIPE_APP_DEV_URL + url,
+            process.env.REACT_APP_STRIPE_APP_PROD_URL + url,
             params
         );
         return data;
@@ -20,7 +20,7 @@ export const fetchDataFromApi = async (url) => {
 };
 
 export const makePaymentRequest = axios.create({
-    baseURL: process.env.REACT_APP_STRIPE_APP_DEV_URL,
+    baseURL: process.env.REACT_APP_STRIPE_APP_PROD_URL,
     headers: {
         Authorization: "bearer " + process.env.REACT_APP_STRIPE_DEV_APP_KEY,
     },
